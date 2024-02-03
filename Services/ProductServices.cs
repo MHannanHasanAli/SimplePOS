@@ -22,9 +22,10 @@
         {
             using (var context = new DataContext())
             {
-
-                return context.Products.OrderBy(x => x.Id).ToList();
-
+                return context.Products
+                    .Where(a => a.Deleted == false)
+                    .OrderByDescending(x => x.Id)
+                    .ToList();
             }
         }
         public Product GetProductById(int id)

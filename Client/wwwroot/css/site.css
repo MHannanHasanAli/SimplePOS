@@ -1,22 +1,112 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
+    /* min-height: 100vh;*/
+    background: #fff;
+}
+
+@media (min-width: 766px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+/*body {
   margin-bottom: 60px;
+}*/
+
+/*Custom CSS*/
+.form-group {
+    margin-top: 15px;
+}
+
+.MediumBtn {
+    width: 100px;
+    border-radius: 20px;
+}
+
+.AddBtn {
+    width: 150px;
+    border-radius: 20px;
+    margin-left: 2px;
+    /*    margin-top: 24px;*/
+    float: right;
+}
+
+.page-title {
+    font-size: 48px;
+}
+
+.hidden {
+    display: none;
+}
+
+.deleteconfirmation {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.row-menu {
+    margin-bottom: -2px;
+}
+
+.static-image {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    margin-top: -8px;
+}
+
+.card-body-main-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grow-on-hover:hover {
+    transform: scale(1.2); /* Adjust the scale factor as needed */
+    transition: transform 0.1s ease; /* Adjust the transition duration and easing function */
+}
+
+.card {
+    margin-top: 10px;
+}
+
+.top-bar {
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button-section {
+    margin-top: 5px;
+    float: right;
+}
+
+.hidden-buttons {
+    margin-top: 5px;
+}
+
+.dot-icon {
+    cursor: pointer;
 }

@@ -22,9 +22,10 @@
         {
             using (var context = new DataContext())
             {
-
-                return context.Categorys.OrderBy(x => x.Id).ToList();
-
+                return context.Categorys
+                    .Where(a => a.Deleted == false)
+                    .OrderByDescending(x => x.Id)
+                    .ToList();
             }
         }
         public Category GetCategoryById(int id)

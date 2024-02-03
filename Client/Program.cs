@@ -4,9 +4,17 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<DataContext>();
+
+//builder.Services.AddIdentity<User, IdentityRole>(options =>
+//{
+//    options.Password.RequiredLength = 6;
+//    options.Password.RequiredUniqueChars = 3;
+
+//}).AddEntityFrameworkStores<DataContext>();
 
 var app = builder.Build();
-builder.Services.AddDbContext<DataContext>();
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -21,7 +29,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
-
+app.UseAuthentication();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
